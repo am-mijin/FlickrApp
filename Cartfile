@@ -1,0 +1,7 @@
+
+github "RxSwiftCommunity/RxAlamofire" "master"
+github "Swinject/Swinject" ~> 2.0
+github "Quick/Quick" ~> 1.0
+github "Quick/Nimble" ~> 7.0
+github "hyperoslo/Cache" ~> 4.0
+github "ReactiveX/RxSwift" ~> 4.0
