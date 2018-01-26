@@ -14,20 +14,14 @@ import RxAlamofire
 ///
 /// A `HTTPServiceProvider` that fetches data from Flickr api.
 ///
+enum HTTPServiceProviderError: Error {
+    case unhandledResponse
+    case general
+}
+
 class FlickrHTTPServiceProvider: HTTPServiceProvider {
     func data(fromUrlString urlString: String) -> Observable<Any> {
         return RxAlamofire.requestData(.get,urlString)
-            .map { response, data in
-                do {
-                    //Flickr JSON output is invalid.
-                    let invalidDataStr = String(data: data, encoding: .utf8)
-                    let validDataStr = invalidDataStr?.replacingOccurrences(of: "\\'", with: "'")
-                    let jsonData = validDataStr?.data(using: .utf8)
-                    if let json = try JSONSerialization.jsonObject(with: jsonData!, options: []) as? [String: Any] {
-                        return json
-                    }
-                }
-               return []
-            }
+            .map {$1}
     }
 }
