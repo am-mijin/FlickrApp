@@ -9,24 +9,27 @@
 import Foundation
 
 struct Feed {
-    let title: String
-    let description: String
-    let mediaUrl: String
+    var title: String = ""
+    var description: String  = ""
+    var mediaUrl: String = ""
     //var published: Date
-    let tags: String 
+    var tags: String = ""
 
-    init?(dictionary: [String: Any]) {
-        guard
-            let title = dictionary["title"] as? String,
-            let description = dictionary["description"] as? String,
-            let media = dictionary["media"] as? [String: Any],
-            let tags = dictionary["tags"] as? String
-        else {
-            return nil
+    init(dictionary: [String: Any]) {
+        self.title = dictionary["title"] as? String ?? ""
+        self.description = dictionary["description"] as? String ?? ""
+        self.tags = dictionary["tags"] as? String ?? ""
+        guard let media = dictionary["media"] as? [String: Any] else {
+            return
         }
-        self.title = title
-        self.description = description
         self.mediaUrl = media ["m"] as? String ?? ""
-        self.tags = tags
     }
+}
+
+extension Feed: Equatable {}
+func ==(lhs: Feed, rhs: Feed) -> Bool {
+    return lhs.title == rhs.title &&
+        lhs.description == rhs.description &&
+        lhs.tags == rhs.tags &&
+        lhs.mediaUrl == rhs.mediaUrl
 }
