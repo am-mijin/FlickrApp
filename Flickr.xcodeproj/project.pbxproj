@@ -19,7 +19,6 @@
 		48110DD4201B461700C68EAF /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DCE201B461600C68EAF /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48110DD5201B461700C68EAF /* RxAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DCF201B461600C68EAF /* RxAlamofire.framework */; };
 		48110DD6201B461700C68EAF /* RxAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DCF201B461600C68EAF /* RxAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48110DD7201B461700C68EAF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DD0201B461600C68EAF /* RxSwift.framework */; };
 		48110DD8201B461700C68EAF /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DD0201B461600C68EAF /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48110DDC201B463600C68EAF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DDA201B463600C68EAF /* Quick.framework */; };
 		48110DDD201B463600C68EAF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DDB201B463600C68EAF /* Nimble.framework */; };
@@ -28,15 +27,14 @@
 		48110DE5201B46DA00C68EAF /* ImageCachingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48110DE1201B46DA00C68EAF /* ImageCachingSpec.swift */; };
 		48110DE6201B46DA00C68EAF /* ImageLoaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48110DE2201B46DA00C68EAF /* ImageLoaderSpec.swift */; };
 		48110DE7201B46DA00C68EAF /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48110DE3201B46DA00C68EAF /* ViewControllerSpec.swift */; };
-		48110DEA201B484900C68EAF /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DDB201B463600C68EAF /* Nimble.framework */; };
 		48110DEB201B484900C68EAF /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DDB201B463600C68EAF /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		48110DEC201B484900C68EAF /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DDA201B463600C68EAF /* Quick.framework */; };
 		48110DED201B484900C68EAF /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DDA201B463600C68EAF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		488C6EA32017FDF800563553 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C6EA22017FDF800563553 /* AppDelegate.swift */; };
 		488C6EA52017FDF800563553 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488C6EA42017FDF800563553 /* ViewController.swift */; };
 		488C6EA82017FDF800563553 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488C6EA62017FDF800563553 /* Main.storyboard */; };
 		488C6EAA2017FDF800563553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488C6EA92017FDF800563553 /* Assets.xcassets */; };
 		488C6EAD2017FDF800563553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488C6EAB2017FDF800563553 /* LaunchScreen.storyboard */; };
+		48B845EA201B999400B59C54 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48110DD0201B461600C68EAF /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,9 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48110DEA201B484900C68EAF /* Nimble.framework in Frameworks */,
-				48110DD7201B461700C68EAF /* RxSwift.framework in Frameworks */,
-				48110DEC201B484900C68EAF /* Quick.framework in Frameworks */,
+				48B845EA201B999400B59C54 /* RxSwift.framework in Frameworks */,
 				48110DD3201B461700C68EAF /* RxCocoa.framework in Frameworks */,
 				48110DD1201B461700C68EAF /* Alamofire.framework in Frameworks */,
 				48110DD5201B461700C68EAF /* RxAlamofire.framework in Frameworks */,
@@ -136,9 +132,7 @@
 			children = (
 				48110DC3201B45DE00C68EAF /* ImageLoader.swift */,
 				48110DC4201B45DE00C68EAF /* FlickrHTTPServiceProvider.swift */,
-				48110DC5201B45DE00C68EAF /* HTTPServiceProvider.swift */,
 				48110DC6201B45DE00C68EAF /* ImageCaching.swift */,
-				48110DC7201B45DE00C68EAF /* Caching.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -178,6 +172,7 @@
 		488C6EA12017FDF800563553 /* Flickr */ = {
 			isa = PBXGroup;
 			children = (
+				48B845E9201B6DA300B59C54 /* Protocol */,
 				48110DC2201B45DE00C68EAF /* Service */,
 				48053B9620180328004458E5 /* Model */,
 				488C6EA22017FDF800563553 /* AppDelegate.swift */,
@@ -201,6 +196,15 @@
 				488C6ED52017FFA200563553 /* Info.plist */,
 			);
 			path = FlickrTests;
+			sourceTree = "<group>";
+		};
+		48B845E9201B6DA300B59C54 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				48110DC7201B45DE00C68EAF /* Caching.swift */,
+				48110DC5201B45DE00C68EAF /* HTTPServiceProvider.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

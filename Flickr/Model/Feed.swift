@@ -12,7 +12,6 @@ struct Feed {
     var title: String = ""
     var description: String  = ""
     var mediaUrl: String = ""
-    //var published: Date
     var tags: String = ""
 
     init(dictionary: [String: Any]) {
